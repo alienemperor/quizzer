@@ -4,12 +4,13 @@
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<title>Quizzer</title>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">To Do</a>
+      <a class="navbar-brand" href="/">Quizzer</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,6 +34,10 @@
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <h3>Topics:</h3>
         <table class="table table-striped table-bordered">
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
         %for row in rows:
           <tr>
             <td> <a href="/edit/{{row[0]}}">{{row[1]}}</a></td>
