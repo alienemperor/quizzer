@@ -44,10 +44,10 @@ def quiz_addtopic():
     upload.save(file_path, overwrite=True)
 
     with open(file_path, "r") as csvDataFile:
-        csvReader = csv.reader(csvDataFile)
+        csvReader = csv.Dictreader(csvDataFile)
         for row in csvReader:
             c = conn.cursor()
-            c.execute("INSERT INTO terms (topicid,term,definition) VALUES (?,?,?)", (top_id, row[0], row[1]))
+            c.execute("INSERT INTO terms (topicid,term,definition) VALUES (?,?,?)", (top_id, row['term'], row['definition']))
             conn.commit()
 
     c.close()
