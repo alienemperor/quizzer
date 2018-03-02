@@ -20,3 +20,24 @@ flashcards
   button for next term
   
   possibly user accounts for seperate users
+
+database setup
+    topics
+        ID
+        TOPIC
+    terms
+        ID
+        TERM
+        DEFINITION
+
+    Possibly
+        Users
+            ID
+            REGTIME
+            USERNAME
+            USERMAIL
+            FIRSTNAME
+            LASTNAME
+            PASS
+
+
