@@ -35,11 +35,12 @@ def quiz_addtopic():
     if ext not in ('.csv'):
         return "File extension not allowed."
 
-    save_path = "/tmp/{topic}".format(topic=topic)
+    save_path = "tmp/{topic}".format(topic=topic)
     if not os.path.exists(save_path):
         os.makedirs(save_path)
 
-    upload.save(save_path)
+    file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
+    upload.save(file_path)
 
     return template('quiz_add', success=topic)
 
