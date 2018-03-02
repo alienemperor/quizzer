@@ -34,8 +34,7 @@
         <table class="table table-striped table-bordered">
         %for row in rows:
           <tr>
-            <td> <a href="/edit/{{row.id}}">{{row.topic}}</a></td>
-          %end
+            <td> <a href="/edit/{{row[0]}}">{{row[1]}}</a></td>
           </tr>
         %end
         </table>
