@@ -34,7 +34,7 @@
 
         %for x in range (0,numQ):
             <form>
-                <h4>{{result[question[x]]}}</h4>
+                <h4>{{result[questions[x]]}}</h4>
 
               <fieldset class="form-group">
                 <div class="row">
