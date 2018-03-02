@@ -31,4 +31,4 @@ def quiz_add():
             return template('quiz_add')
 
 
-run(host='192.168.100.222', port=8000, debug=True, reloader=True)
+run(host='192.168.100.222', port=8090, debug=True, reloader=True)
