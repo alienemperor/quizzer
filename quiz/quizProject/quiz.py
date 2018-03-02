@@ -30,11 +30,11 @@ def quiz_addtopic():
     c.close()
 
     alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">' \
-            '{{topic}} added to the database' \
+            '%s added to the database' \
             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
             '<span aria-hidden="true">&times;</span>' \
             '</button>' \
-            '</div>'
+            '</div>' % topic
 
     return template('quiz_add'), alert
 
