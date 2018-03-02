@@ -61,7 +61,7 @@ def show_terms(no):
     c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
     result = c.fetchall()
     d = conn.cursor()
-    d.execute("SELECT topic FROM topics WHERE topicid LIKE ?", (str(no),))
+    d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
     topic = d.fetchall()
     output = template('terms.tpl', rows=result, topic=topic)
     return output
