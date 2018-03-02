@@ -35,7 +35,7 @@
         %for row in rows:
           <tr>
           %for col in row:
-            <td>{{row[1]}}</td>
+            <td>{{col}}</td>
           %end
           </tr>
         %end
