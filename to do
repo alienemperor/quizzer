@@ -27,6 +27,7 @@ database setup
         TOPIC
     terms
         ID
+        TOPICID (foreign key)
         TERM
         DEFINITION
 
