@@ -31,7 +31,7 @@
     </nav>
 
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
-        <h3>The open items are as follows:</h3>
+        <h3>Topics:</h3>
         <table class="table table-striped table-bordered">
         %for row in rows:
           <tr>
