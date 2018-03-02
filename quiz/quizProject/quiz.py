@@ -8,7 +8,7 @@ def quiz_home():
 
     conn = sqlite3.connect('quiz.db')
     c = conn.cursor()
-    c.execute("SELECT topic FROM topics")
+    c.execute("SELECT id, topic FROM topics")
     result = c.fetchall()
     output = template('home.tpl', rows=result)
     return output
