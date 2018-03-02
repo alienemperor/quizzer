@@ -1,6 +1,6 @@
 import sqlite3
 import os
-from bottle import route, run, template, request, error
+from bottle import route, run, template, request, error, static_file
 
 
 @route('/')
