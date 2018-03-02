@@ -78,9 +78,9 @@ def quiz_tests(no):
     numQ = 25
 
     if len(result) < numQ:
-        numQ = len(result)
+        numQ = len(result)-1
 
-    questions = random.sample(range(1, len(result)), numQ)
+    questions = random.sample(range(0, len(result)), numQ)
 
     return template('quiz.tpl', questions=questions, numQ=numQ, result=result, topic=topic)
 
