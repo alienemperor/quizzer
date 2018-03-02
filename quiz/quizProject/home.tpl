@@ -34,10 +34,6 @@
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <h3>Topics:</h3>
         <table class="table table-striped table-bordered">
-            <tr>
-                <th>Term</th>
-                <th>Definition</th>
-            </tr>
         %for row in rows:
           <tr>
             <td> <a href="/edit/{{row[0]}}">{{row[1]}}</a></td>

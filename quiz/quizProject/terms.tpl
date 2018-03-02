@@ -32,6 +32,10 @@
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <h2>{{topic}}</h2>
         <table class="table table-striped table-bordered">
+            <tr>
+                <th>Term</th>
+                <th>Definition</th>
+            </tr>
         %for row in rows:
           <tr>
           %for col in row:
