@@ -34,13 +34,7 @@
         <table class="table table-striped table-bordered">
         %for row in rows:
           <tr>
-          %for col in row:
-            %num = col
-            %if isinstance(num, int):
-                <td> <a href="/edit/{{num}}">{{col}}</a></td>
-            %else:
-                <td>{{col}}</td>
-            %end
+            <td> <a href="/edit/{{row.id}}">{{row.topic}}</a></td>
           %end
           </tr>
         %end
