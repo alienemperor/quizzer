@@ -28,11 +28,11 @@
     </nav>
 
      <div class="container" style="margin:auto;width:80%;padding-top:20px;">
-        <form method="POST" action="/addTopic">
+        <form action="/addTopic" method="POST">
             <h3>Add New Topic</h3>
           <div class="form-group">
             <label for="topic">Topic</label>
-            <input type="text" class="form-control" id="topic" aria-describedby="topicHelp" placeholder="Enter topic">
+            <input type="text" name="topic" class="form-control" id="topic" aria-describedby="topicHelp" placeholder="Enter topic">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
