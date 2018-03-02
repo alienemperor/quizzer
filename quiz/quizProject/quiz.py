@@ -67,7 +67,7 @@ def show_terms(no):
 
 
 @route('/quiz/<no:int>')
-def quiz_tests():
+def quiz_tests(no):
     conn = sqlite3.connect('quiz.db')
     c = conn.cursor()
     c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
