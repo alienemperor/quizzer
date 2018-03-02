@@ -1,9 +1,10 @@
 import sqlite3
+import os
 from bottle import route, run, template, request, error
 
 
 @route('/')
-@route('/quiz')
+@route('/home')
 def quiz_home():
 
     conn = sqlite3.connect('quiz.db')
@@ -29,15 +30,25 @@ def quiz_addtopic():
     conn.commit()
     c.close()
 
-    '''
-    alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">' \
-            '%s added to the database' \
-            '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
-            '<span aria-hidden="true">&times;</span>' \
-            '</button>' \
-            '</div>' % topic
-    '''
+    upload = request.files.get('upload')
+    name, ext = os.path.splitext(upload.filename)
+    if ext not in ('.csv'):
+        return "File extension not allowed."
+
+    save_path = "/tmp/{topic}".format(topic=topic)
+    if not os.path.exists(save_path):
+        os.makedirs(save_path)
+
+    file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
+    upload.save(file_path)
+
     return template('quiz_add', success=topic)
+
+
+@route('/quiz')
+def quiz_tests():
+
+    return template('quiz.tpl')
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)

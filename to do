@@ -2,6 +2,7 @@ What I want from this:
 Import data
   Input csv with terms and definitions
   create new topic and save definitions to db
+  add new terms and defs to topic later
 
 Quizzing
   Call topic
