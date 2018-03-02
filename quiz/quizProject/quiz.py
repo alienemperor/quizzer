@@ -24,7 +24,7 @@ def quiz_addtopic():
     topic = request.forms.get("topic")
     conn = sqlite3.connect('quiz.db')
     c = conn.cursor()
-    c.execute("INSERT INTO topics (topic) VALUES (?)", topic)
+    c.execute("INSERT INTO topics (topic) VALUES (?)", (topic,))
 
     conn.commit()
     c.close()
