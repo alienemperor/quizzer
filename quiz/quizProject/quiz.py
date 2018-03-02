@@ -22,7 +22,14 @@ def quiz_add():
 @route('/addTopic', method='POST')
 def quiz_addtopic():
     topic = request.forms.get("topic")
-    return "{topic}".format(topic=topic)
+    conn = sqlite3.connect('quiz.db')
+    c = conn.cursor()
+    c.execute("INSERT INTO topic (topic) VALUES (?)", (topic))
+
+    conn.commit()
+    c.close()
+
+    return "{topic} added to the database".format(topic=topic)
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
