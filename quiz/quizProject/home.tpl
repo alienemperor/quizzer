@@ -33,11 +33,11 @@
 
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <h3>Topics:</h3>
-        <table class="table table-striped table-bordered" style="margin:auto;">
+        <table class="table table-striped table-bordered" style="text:center">
         %for row in rows:
-          <tr style="margin:auto;">
-            <td style="margin:auto;"> <a href="/edit/{{row[0]}}">{{row[1]}}</a></td>
-              <td style="margin:auto;"><a href="/edit/{{row[0]}}"><button type="button" class="btn btn-primary">Take Quiz</button></a></td>
+          <tr>
+            <td> <a href="/edit/{{row[0]}}">{{row[1]}}</a></td>
+              <td><a href="/edit/{{row[0]}}"><button type="button" class="btn btn-primary">Take Quiz</button></a></td>
           </tr>
         %end
         </table>

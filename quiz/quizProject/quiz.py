@@ -1,5 +1,5 @@
 import sqlite3
-import os, csv
+import os, csv, random
 from bottle import route, run, template, request, error, static_file
 
 
@@ -66,12 +66,23 @@ def show_terms(no):
     return output
 
 
-@route('/quiz')
+@route('/quiz/<no:int>')
 def quiz_tests():
+    conn = sqlite3.connect('quiz.db')
+    c = conn.cursor()
+    c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
+    result = c.fetchall()
+    d = conn.cursor()
+    d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
+    topic = d.fetchall()
+    numQ = 25
 
+    if len(result) < numQ:
+        numQ = len(result)
 
+    questions = random.sample(range(1, len(result)), numQ)
 
-    return template('quiz.tpl')
+    return template('quiz.tpl', questions=questions, numQ=numQ, result=result, topic=topic)
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
