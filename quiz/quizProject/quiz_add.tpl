@@ -27,6 +27,14 @@
       </div>
     </nav>
 
+    %if success:
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{success}} added to the database
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
      <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <form action="/addTopic" method="POST">
             <h3>Add New Topic</h3>

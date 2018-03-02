@@ -29,14 +29,15 @@ def quiz_addtopic():
     conn.commit()
     c.close()
 
+    '''
     alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">' \
             '%s added to the database' \
             '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' \
             '<span aria-hidden="true">&times;</span>' \
             '</button>' \
             '</div>' % topic
-
-    return alert, quiz_add()
+    '''
+    return template('quiz_add', success=topic)
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
