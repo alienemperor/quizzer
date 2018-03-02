@@ -39,7 +39,7 @@ def quiz_addtopic():
     if not os.path.exists(save_path):
         os.makedirs(save_path)
 
-    upload.write(save_path)
+    upload.save(save_path)
 
     return template('quiz_add', success=topic)
 
