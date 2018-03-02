@@ -43,7 +43,7 @@ def quiz_addtopic():
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     upload.save(file_path)
 
-    with open(file_path) as csvDataFile:
+    with open(file_path, "r") as csvDataFile:
         csvReader = csv.DictReader(csvDataFile)
         for row in csvReader:
             c.execute("INSERT INTO terms (topicid,term,definition) VALUES (?,?,?)", (top_id, row['term'], row['definition']))
