@@ -14,21 +14,15 @@ def quiz_home():
     return output
 
 
-@route('/add', method='POST')
+@route('/add')
 def quiz_add():
+    return template('quiz_add')
 
-        if request.POST.save:
 
-            topic = request.POST.forms.get('topic')
-
-            #conn = sqlite3.connect('quiz.db')
-            #c = conn.cursor()
-
-            #c.execute("INSERT INTO ")
-
-            return "{topic}".format(topic=topic)
-        else:
-            return template('quiz_add')
+@route('/addTopic', method='POST')
+def quiz_addtopic():
+    topic = request.forms.get("topic")
+    return "{topic}".format(topic=topic)
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
