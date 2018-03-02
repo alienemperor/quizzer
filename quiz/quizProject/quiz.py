@@ -15,8 +15,8 @@ def quiz_home():
 
 
 @route('/add')
-def quiz_add(alert):
-    return template('quiz_add'), alert
+def quiz_add():
+    return template('quiz_add')
 
 
 @route('/addTopic', method='POST')
@@ -36,7 +36,7 @@ def quiz_addtopic():
             '</button>' \
             '</div>' % topic
 
-    return quiz_add(alert)
+    return alert, quiz_add()
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
