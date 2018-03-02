@@ -52,6 +52,15 @@ def quiz_addtopic():
     os.remove(file_path)
     return template('quiz_add', success=topic)
 
+@route('/edit/<no:int>', method='GET')
+def show_terms(no):
+    conn = sqlite3.connect('quiz.db')
+    c = conn.cursor()
+    c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
+    result = c.fetchall()
+    output = template('home.tpl', rows=result)
+    return output
+
 
 @route('/quiz')
 def quiz_tests():
