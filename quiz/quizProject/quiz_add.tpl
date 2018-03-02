@@ -34,6 +34,7 @@
             <span aria-hidden="true">&times;</span>
             </button>
         </div>
+    %end
 
      <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <form action="/addTopic" method="POST">
