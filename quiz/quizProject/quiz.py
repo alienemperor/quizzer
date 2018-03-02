@@ -48,6 +48,7 @@ def quiz_addtopic():
         for row in csvReader:
             c = conn.cursor()
             c.execute("INSERT INTO terms (topicid,term,definition) VALUES (?,?,?)", (top_id, row[0], row[1]))
+            conn.commit()
 
     c.close()
     os.remove(file_path)
