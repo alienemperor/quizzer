@@ -29,5 +29,22 @@
       </div>
     </nav>
 
+    <div class="container" style="margin:auto;width:80%;padding-top:20px;">
+        <h3>The open items are as follows:</h3>
+        <table class="table table-striped table-bordered">
+        %for row in rows:
+          <tr>
+          %for col in row:
+            %num = col
+            %if isinstance(num, int):
+                <td> <a href="/edit/{{num}}">{{col}}</a></td>
+            %else:
+                <td>{{col}}</td>
+            %end
+          %end
+          </tr>
+        %end
+        </table>
+    </div>
 
 </body>
