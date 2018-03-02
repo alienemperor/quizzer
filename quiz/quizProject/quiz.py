@@ -30,8 +30,8 @@ def quiz_addtopic():
     conn.commit()
     c.close()
 
-    upload = request.POST['upload']
-    name, ext = os.path.splitext(upload)
+    upload = request.files.get('upload')
+    name, ext = os.path.splitext(upload.filename)
     if ext not in ('.csv'):
         return "File extension not allowed."
 
@@ -39,8 +39,7 @@ def quiz_addtopic():
     if not os.path.exists(save_path):
         os.makedirs(save_path)
 
-    file_path = "{path}/{file}".format(path=save_path, file=upload)
-    upload.write(file_path)
+    upload.write(save_path)
 
     return template('quiz_add', success=topic)
 

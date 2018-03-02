@@ -42,9 +42,7 @@
           <div class="form-group">
             <label for="topic">Topic</label>
             <input type="text" name="topic" class="form-control" id="topic" aria-describedby="topicHelp" placeholder="Enter topic">
-          </div>
-            <div class="form-group">
-            <label for="upload">Upload a .csv file</label>
+              <label for="upload">Upload a .csv file</label>
             <input type="file" class="form-control-file" id="upload" name="upload">
           </div>
           <button type="submit" class="btn btn-primary">Submit</button>
