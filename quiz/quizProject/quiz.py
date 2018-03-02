@@ -30,7 +30,7 @@ def quiz_addtopic():
     conn.commit()
     c.close()
 
-    upload = request.files.get('upload')
+    upload = request.POST['upload']
     name, ext = os.path.splitext(upload.file)
     if ext not in ('.csv'):
         return "File extension not allowed."
