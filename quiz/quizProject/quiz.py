@@ -1,5 +1,5 @@
 import sqlite3
-import os
+import os, csv
 from bottle import route, run, template, request, error, static_file
 
 
@@ -26,9 +26,10 @@ def quiz_addtopic():
     conn = sqlite3.connect('quiz.db')
     c = conn.cursor()
     c.execute("INSERT INTO topics (topic) VALUES (?)", (topic,))
+    top_id = c.lastrowid
 
     conn.commit()
-    c.close()
+
 
     upload = request.files.get('upload')
     name, ext = os.path.splitext(upload.filename)
@@ -42,6 +43,12 @@ def quiz_addtopic():
     file_path = "{path}/{file}".format(path=save_path, file=upload.filename)
     upload.save(file_path)
 
+    with open(file_path) as csvDataFile:
+        csvReader = csv.DictReader(csvDataFile)
+        for row in csvReader:
+            c.execute("INSERT INTO terms (topicid,term,definition) VALUES (?,?,?)", (top_id, row['term'], row['definition']))
+
+    c.close()
     return template('quiz_add', success=topic)
 
 
