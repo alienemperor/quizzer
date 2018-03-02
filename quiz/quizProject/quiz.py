@@ -30,7 +30,6 @@ def quiz_addtopic():
 
     conn.commit()
 
-
     upload = request.files.get('upload')
     name, ext = os.path.splitext(upload.filename)
     if ext not in ('.csv'):
@@ -69,6 +68,8 @@ def show_terms(no):
 
 @route('/quiz')
 def quiz_tests():
+
+
 
     return template('quiz.tpl')
 

@@ -37,6 +37,7 @@
         %for row in rows:
           <tr>
             <td> <a href="/edit/{{row[0]}}">{{row[1]}}</a></td>
+            <td><button type="button" class="btn btn-primary" href="/edit/{{row[0]}}">Primary</button></td>
           </tr>
         %end
         </table>
