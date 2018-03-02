@@ -37,7 +37,7 @@
     %end
 
      <div class="container" style="margin:auto;width:80%;padding-top:20px;">
-        <form action="/addTopic" method="POST">
+        <form action="/addTopic" method="POST" enctype="multipart/form-data">
             <h3>Add New Topic</h3>
           <div class="form-group">
             <label for="topic">Topic</label>
