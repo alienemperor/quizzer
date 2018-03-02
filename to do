@@ -1,0 +1,22 @@
+What I want from this:
+Import data
+  Input csv with terms and definitions
+  create new topic and save definitions to db
+
+Quizzing
+  Call topic
+  pull a term, the correct definition and 3 other random definitions
+  display output in appealing view
+  keep track of correct and incorrect answers
+  Possibly:
+    chose number of terms to do at once
+      (all on one page)
+    
+
+flashcards
+  call topic
+  show term and click to flip to definition
+    or vice versa
+  button for next term
+  
+  possibly user accounts for seperate users
