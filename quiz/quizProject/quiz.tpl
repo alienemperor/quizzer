@@ -32,7 +32,7 @@
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <h2>{{topic}}</h2>
 
-        %for x in range (0,c+1,len(questions)-1):
+        %for x in range (0,numQ):
             <form>
                 <h4>{{result[question[x]]}}</h4>
 
