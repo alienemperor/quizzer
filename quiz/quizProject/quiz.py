@@ -16,7 +16,7 @@ def quiz_home():
 
 @route('/add')
 def quiz_add():
-    return template('quiz_add')
+    return template('quiz_add', success=None)
 
 
 @route('/addTopic', method='POST')
