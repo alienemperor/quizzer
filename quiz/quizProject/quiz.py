@@ -40,7 +40,7 @@ def quiz_addtopic():
         os.makedirs(save_path)
 
     file_path = "{path}/{file}".format(path=save_path, file=upload)
-    upload.save(file_path)
+    upload.write(file_path)
 
     return template('quiz_add', success=topic)
 
