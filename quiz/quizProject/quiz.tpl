@@ -58,6 +58,7 @@
                             </label>
                           </div>
                       %end
+                      %count++
                     %end
                   </div>
                 </div>
