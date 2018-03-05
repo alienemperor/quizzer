@@ -1,5 +1,5 @@
 %#The page where quizzes are made
-
+%import random
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -38,7 +38,6 @@
               <fieldset class="form-group">
                 <div class="row">
                   <div class="col-sm-10">
-                    %import random
                     %ans = [x]
                     %ans.append(random.sample(range(0, len(result)), 3))
                     %random.shuffle(ans)
@@ -46,7 +45,7 @@
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="Radios" id="gridRadios1" value="Radio1{{x}}" checked>
                         <label class="form-check-label" for="gridRadios1">
-                          {{result[questions[y]]}}
+                          {{y}}
                         </label>
                       </div>
                     %end
