@@ -41,7 +41,7 @@
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                       <label class="form-check-label" for="gridRadios1">
-                        {{result[questions[x][1]}}
+                        {{result[questions[x][1]]}}
                       </label>
                     </div>
                     <div class="form-check">
