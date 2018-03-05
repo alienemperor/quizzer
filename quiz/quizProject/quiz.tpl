@@ -32,6 +32,7 @@
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <h2>{{topic[0]}}</h2>
 
+        %countx = 1
         %for x in range (0,numQ):
             <form>
                 <h4>{{result[questions[x]][0]}}</h4>
@@ -41,30 +42,31 @@
                     %ans = random.sample(range(0, len(result)-1), 3)
                     %ans.append(x)
                     %random.shuffle(ans)
-                    %count = 1
+                    %county = 1
                     %for y in ans:
                       %if count == 1:
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{count}}" value="Radio{{x}}" checked>
-                            <label class="form-check-label" for="gridRadios{{count}}">
+                            <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{countx}}{{county}}" value="Radio{{x}}" checked>
+                            <label class="form-check-label" for="gridRadios{{countx}}{{county}}">
                               {{result[questions[y]][1]}}
                             </label>
                           </div>
                       %else:
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{count}}" value="Radio{{x}}">
-                            <label class="form-check-label" for="gridRadios{{count}}">
+                            <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{countx}}{{county}}" value="Radio{{x}}">
+                            <label class="form-check-label" for="gridRadios{{countx}}{{county}}">
                               {{result[questions[y]][1]}}
                             </label>
                           </div>
                       %end
-                      %count = count +1
+                      %county = county +1
                     %end
                   </div>
                 </div>
               </fieldset>
 
             </form>
+        %countx = countx + 1
         %end
     </div>
 
