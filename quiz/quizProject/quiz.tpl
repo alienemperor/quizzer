@@ -39,21 +39,27 @@
                 <div class="row">
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="Radio1{{x}}" id="gridRadios1" value="option1" checked>
                       <label class="form-check-label" for="gridRadios1">
                         {{result[questions[x]][1]}}
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="Radio2{{x}}" id="gridRadios2" value="option2">
                       <label class="form-check-label" for="gridRadios2">
-                        Second radio
+                        {{result[questions[x]][1]}}
                       </label>
                     </div>
-                    <div class="form-check disabled">
-                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Radio3{{x}}" id="gridRadios3" value="option3">
                       <label class="form-check-label" for="gridRadios3">
-                        Third disabled radio
+                        {{result[questions[x]][1]}}
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="Radio4{{x}}" id="gridRadios4" value="option4">
+                      <label class="form-check-label" for="gridRadios4">
+                        {{result[questions[x]][1]}}
                       </label>
                     </div>
                   </div>
