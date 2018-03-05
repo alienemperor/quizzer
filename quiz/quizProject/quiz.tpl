@@ -34,14 +34,14 @@
 
         %for x in range (0,numQ):
             <form>
-                <h4>{{result[questions[x][0]]}}</h4>
+                <h4>{{result[questions[x]][0]}}</h4>
               <fieldset class="form-group">
                 <div class="row">
                   <div class="col-sm-10">
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
                       <label class="form-check-label" for="gridRadios1">
-                        {{result[questions[x][1]]}}
+                        {{result[questions[x]][1]}}
                       </label>
                     </div>
                     <div class="form-check">
