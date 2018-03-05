@@ -82,6 +82,7 @@ def quiz_tests(no):
         numQ = len(result)-1
 
     questions = random.sample(range(0, len(result)), numQ)
+    ans = random.sample(range(0, len(result)), 3)
 
     return template('quiz', questions=questions, numQ=numQ, result=result, topic=topic)
 
