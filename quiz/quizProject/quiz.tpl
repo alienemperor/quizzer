@@ -30,7 +30,7 @@
     </nav>
 
     <div class="container" style="margin:auto;width:80%;padding-top:20px;">
-        <h2>{{topic}}</h2>
+        <h2>{{topic[0]}}</h2>
 
         %for x in range (0,numQ):
             <form>
