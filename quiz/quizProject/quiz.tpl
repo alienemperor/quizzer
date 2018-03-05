@@ -38,8 +38,9 @@
               <fieldset class="form-group">
                 <div class="row">
                   <div class="col-sm-10">
-                    %ans.append(x)
                     %import random
+                    %ans = [x]
+                    %ans = random.sample(range(0, len(result)), 3)
                     %random.shuffle(ans)
                     %for y in ans:
                       <div class="form-check">
