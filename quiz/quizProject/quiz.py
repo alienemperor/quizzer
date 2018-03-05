@@ -61,7 +61,7 @@ def show_terms(no):
     result = c.fetchall()
     d = conn.cursor()
     d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
-    topic = d.fetchall()
+    topic = d.fetchone()
     output = template('terms.tpl', rows=result, topic=topic)
     return output
 
@@ -74,7 +74,7 @@ def quiz_tests(no):
     result = c.fetchall()
     d = conn.cursor()
     d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
-    topic = d.fetchall()
+    topic = d.fetchone()
     numQ = 25
 
     if len(result) < numQ:
