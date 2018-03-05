@@ -58,7 +58,7 @@
                             </label>
                           </div>
                       %end
-                      %count++
+                      %count = count +1
                     %end
                   </div>
                 </div>
