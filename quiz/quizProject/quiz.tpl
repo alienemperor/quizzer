@@ -38,30 +38,16 @@
               <fieldset class="form-group">
                 <div class="row">
                   <div class="col-sm-10">
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios1" value="Radio1{{x}}" checked>
-                      <label class="form-check-label" for="gridRadios1">
-                        {{result[questions[x]][1]}}
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios2" value="Radio2{{x}}">
-                      <label class="form-check-label" for="gridRadios2">
-                        {{result[questions[x]][1]}}
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios3" value="Radio3{{x}}">
-                      <label class="form-check-label" for="gridRadios3">
-                        {{result[questions[x]][1]}}
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios4" value="Radio4{{x}}">
-                      <label class="form-check-label" for="gridRadios4">
-                        {{result[questions[x]][1]}}
-                      </label>
-                    </div>
+                    %ans = [x]
+                    %ans.append(random.sample(range(0, len(result)), 3))
+                    %for y in ans:
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Radios" id="gridRadios1" value="Radio1{{x}}" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                          {{result[questions[y]][1]}}
+                        </label>
+                      </div>
+                    %end
                   </div>
                 </div>
               </fieldset>

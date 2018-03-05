@@ -32,7 +32,7 @@ def quiz_addtopic():
 
     upload = request.files.get('upload')
     name, ext = os.path.splitext(upload.filename)
-    if ext not in ('.csv'):
+    if ext not in '.csv':
         return "File extension not allowed."
 
     save_path = "tmp/{topic}".format(topic=topic)
@@ -52,6 +52,7 @@ def quiz_addtopic():
     c.close()
     os.remove(file_path)
     return template('quiz_add', success=topic)
+
 
 @route('/edit/<no:int>', method='GET')
 def show_terms(no):
