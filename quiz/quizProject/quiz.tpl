@@ -43,7 +43,7 @@
                     %random.shuffle(ans)
                     %count = 1
                     %for y in ans:
-                      %if count = 1:
+                      %if count == 1:
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{count}}" value="Radio{{x}}" checked>
                             <label class="form-check-label" for="gridRadios{{count}}">
