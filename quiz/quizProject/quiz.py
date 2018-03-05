@@ -62,7 +62,7 @@ def show_terms(no):
     d = conn.cursor()
     d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
     topic = d.fetchone()
-    output = template('terms.tpl', rows=result, topic=topic)
+    output = template('terms', rows=result, topic=topic)
     return output
 
 
@@ -82,7 +82,7 @@ def quiz_tests(no):
 
     questions = random.sample(range(0, len(result)), numQ)
 
-    return template('quiz.tpl', questions=questions, numQ=numQ, result=result, topic=topic)
+    return template('quiz', questions=questions, numQ=numQ, result=result, topic=topic)
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
