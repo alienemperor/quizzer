@@ -40,7 +40,7 @@
                   <div class="col-sm-10">
                     %import random
                     %ans = [x]
-                    %ans = random.sample(range(0, len(result)), 3)
+                    %ans.append(random.sample(range(0, len(result)), 3))
                     %random.shuffle(ans)
                     %for y in ans:
                       <div class="form-check">
