@@ -38,14 +38,14 @@
               <fieldset class="form-group">
                 <div class="row">
                   <div class="col-sm-10">
-                    %ans = [x]
-                    %ans.append(random.sample(range(0, len(result)), 3))
+                    %ans = random.sample(range(0, len(result)), 3)
+                    %ans.append(x)
                     %random.shuffle(ans)
                     %for y in ans:
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="Radios" id="gridRadios1" value="Radio1{{x}}" checked>
                         <label class="form-check-label" for="gridRadios1">
-                          {{y}}
+                          {{result[questions[y]][1]}}
                         </label>
                       </div>
                     %end
