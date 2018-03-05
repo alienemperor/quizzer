@@ -38,7 +38,7 @@
               <fieldset class="form-group">
                 <div class="row">
                   <div class="col-sm-10">
-                    %ans = random.sample(range(0, len(result)), 3)
+                    %ans = random.sample(range(0, len(result)-1), 3)
                     %ans.append(x)
                     %random.shuffle(ans)
                     %for y in ans:
