@@ -39,25 +39,25 @@
                 <div class="row">
                   <div class="col-sm-10">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radio1{{x}}" id="gridRadios1" value="option1" checked>
+                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios1" value="Radio1{{x}}" checked>
                       <label class="form-check-label" for="gridRadios1">
                         {{result[questions[x]][1]}}
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radio2{{x}}" id="gridRadios2" value="option2">
+                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios2" value="Radio2{{x}}">
                       <label class="form-check-label" for="gridRadios2">
                         {{result[questions[x]][1]}}
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radio3{{x}}" id="gridRadios3" value="option3">
+                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios3" value="Radio3{{x}}">
                       <label class="form-check-label" for="gridRadios3">
                         {{result[questions[x]][1]}}
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="Radio4{{x}}" id="gridRadios4" value="option4">
+                      <input class="form-check-input" type="radio" name="Radios" id="gridRadios4" value="Radio4{{x}}">
                       <label class="form-check-label" for="gridRadios4">
                         {{result[questions[x]][1]}}
                       </label>
