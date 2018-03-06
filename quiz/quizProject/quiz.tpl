@@ -29,8 +29,8 @@
       </div>
     </nav>
 
-    <div class="container" style="margin:auto;width:40%;padding-top:20px;padding-left:10px;">
-        <h2>{{topic[0]}}</h2>
+    <div class="container" style="margin:auto;width:40%;padding-top:20px;">
+        <h2 style="padding:10px;">{{topic[0]}}</h2>
 
         %countx = 1
         %for x in range (0,numQ):
@@ -39,7 +39,7 @@
                 %else:
                     %bckg = None
                 %end
-            <form class="{{bckg}}">
+            <form class="{{bckg}}" style="padding:10px;">
                 <h4>{{result[questions[x]][0]}}</h4>
               <fieldset class="form-group">
                 <div class="row">
