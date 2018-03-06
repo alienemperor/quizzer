@@ -89,9 +89,9 @@ def quiz_tests(no):
             resultquest.append(quest)
             if quest in result:
                 if ans == quest[1]:
-                    success[x] = True
+                    success[x-1] = True
                 else:
-                    success[x] = False
+                    success[x-1] = False
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success)
 
