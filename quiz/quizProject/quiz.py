@@ -90,7 +90,7 @@ def quiz_tests(no):
 
             for i in result:
                 if quest in i[0]:
-                    if ans == i[1]:
+                    if ans in i[1]:
                         success.append("True")
                     else:
                         success.append("False")
