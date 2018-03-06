@@ -93,7 +93,7 @@ def quiz_tests(no):
                 if quest in i[0] and ans in i[1]:
                     realans.append(i[1])
                     success.append(True)
-                else:
+                elif quest in i[0] and ans not in i[1]:
                     realans.append(i[1])
                     success.append(False)
 
