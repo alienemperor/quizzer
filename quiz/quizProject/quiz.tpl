@@ -45,9 +45,12 @@
                   <fieldset class="form-group">
                     <div class="row">
                       <div class="col-sm-10">
+
                         %def get_ans():
                             %ans = random.sample(range(0, len(result)-1), 3)
                             %ans.append(x)
+                        %end
+
                         %get_ans()
 
                         %for num in ans:
