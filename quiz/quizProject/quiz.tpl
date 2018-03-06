@@ -31,44 +31,44 @@
 
     <div class="container" style="margin:auto;width:40%;padding-top:20px;">
         <h2 style="padding:10px;">{{topic[0]}}</h2>
-
-        %countx = 1
-        %for x in range (0,numQ):
-                %if countx%2 == 0:
-                    %bckg = "bg-light"
-                %else:
-                    %bckg = None
-                %end
-            <form class="{{bckg}}" style="padding:10px;">
-                <h4>{{result[questions[x]][0]}}</h4>
-              <fieldset class="form-group">
-                <div class="row">
-                  <div class="col-sm-10">
-                    %ans = random.sample(range(0, len(result)-1), 3)
-                    %ans.append(x)
-                    %random.shuffle(ans)
-                    %county = 1
-                    %for y in ans:
-                      %if county == 1:
-                        %chck = "checked"
-                      %else:
-                        %chck = None
-                      %end
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{countx}}{{county}}" value="Radio{{x}}" {{chck}}>
-                        <label class="form-check-label" for="gridRadios{{countx}}{{county}}">
-                          {{result[questions[y]][1]}}
-                        </label>
-                      </div>
-                      %county = county +1
+        <form action="/quiz/{{no}}">
+            %countx = 1
+            %for x in range (0,numQ):
+                    %if countx%2 == 0:
+                        %bckg = "bg-light"
+                    %else:
+                        %bckg = None
                     %end
-                  </div>
-                </div>
-              </fieldset>
-
-            </form>
-        %countx = countx + 1
-        %end
+                <form class="{{bckg}}" style="padding:10px;">
+                    <h4>{{result[questions[x]][0]}}</h4>
+                  <fieldset class="form-group">
+                    <div class="row">
+                      <div class="col-sm-10">
+                        %ans = random.sample(range(0, len(result)-1), 3)
+                        %ans.append(x)
+                        %random.shuffle(ans)
+                        %county = 1
+                        %for y in ans:
+                          %if county == 1:
+                            %chck = "checked"
+                          %else:
+                            %chck = None
+                          %end
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="Radios{{countx}}" id="Radios{{countx}}{{county}}" value="Radio{{x}}" {{chck}}>
+                            <label class="form-check-label" for="Radios{{countx}}{{county}}">
+                              {{result[questions[y]][1]}}
+                            </label>
+                          </div>
+                          %county = county +1
+                        %end
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+            %countx = countx + 1
+            %end
+        </form>
     </div>
 
 

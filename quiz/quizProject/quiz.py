@@ -67,23 +67,29 @@ def show_terms(no):
     return output
 
 
-@route('/quiz/<no:int>')
+@route('/quiz/<no:int>', method='POST')
 def quiz_tests(no):
-    conn = sqlite3.connect('quiz.db')
-    c = conn.cursor()
-    c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
-    result = c.fetchall()
-    d = conn.cursor()
-    d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
-    topic = d.fetchone()
-    numQ = 25
 
-    if len(result) < numQ:
-        numQ = len(result)-1
+    if request.POST:
 
-    questions = random.sample(range(0, len(result)), numQ)
+        return template('quiz_result')
 
-    return template('quiz', questions=questions, numQ=numQ, result=result, topic=topic)
+    else:
+        conn = sqlite3.connect('quiz.db')
+        c = conn.cursor()
+        c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
+        result = c.fetchall()
+        d = conn.cursor()
+        d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
+        topic = d.fetchone()
+        numQ = 25
+
+        if len(result) < numQ:
+            numQ = len(result)-1
+
+        questions = random.sample(range(0, len(result)), numQ)
+
+        return template('quiz', questions=questions, numQ=numQ, result=result, topic=topic, no=no)
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
