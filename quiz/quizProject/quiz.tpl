@@ -39,7 +39,7 @@
                 %if countx%2 == 0:
                     %bckg = style="Background-color:grey;"
                 %else:
-                    %bckg = Null
+                    %bckg = None
                 %end
               <fieldset class="form-group" {{bckg}}>
                 <div class="row">
