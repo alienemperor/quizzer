@@ -33,9 +33,14 @@
         <h3>Topics:</h3>
         <table class="table table-striped table-bordered" style="text:center">
         %for x in range(1, len(resultans)):
+            %if success[x]:
+                %y = "correct"
+            %else:
+                %y = "Incorrect"
+            %end
           <tr>
             <td>{{resultquest[x]}}</td>
-            <td>{{resultans[x]}}</td>
+            <td>"{{resultans[x]}}       {{y}}"</td>
           </tr>
         %end
         </table>

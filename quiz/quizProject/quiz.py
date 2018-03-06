@@ -93,7 +93,7 @@ def quiz_tests(no):
                 else:
                     success[x] = False
 
-        return template('quiz_result', resultans=resultans, resultquest=resultquest)
+        return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success)
 
     else:
         numQ = 25
