@@ -92,6 +92,8 @@ def quiz_tests(no):
                     success.append(True)
                 else:
                     success.append(False)
+            else:
+                success = "no"
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success)
 
