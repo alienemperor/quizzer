@@ -77,7 +77,7 @@ def quiz_tests(no):
         resultquest = []
         for x in range(1, 10):
             resultans.append(request.forms.get("Radios" + str(x)))
-            resultquest.append(request.form.get("quest" + str(x)))
+            resultquest.append(request.forms.get("quest" + str(x)))
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest)
 
