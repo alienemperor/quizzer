@@ -77,9 +77,9 @@ def quiz_tests(no):
     d = conn.cursor()
     d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
     topic = d.fetchone()
-    success = []
 
     if request.POST:
+        success = []
         resultans = []
         resultquest = []
         for x in range(1, 10):
