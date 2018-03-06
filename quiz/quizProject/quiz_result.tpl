@@ -41,7 +41,8 @@
             %end
           <tr>
             <td>{{resultquest[x]}}</td>
-            <td>{{resultans[x]}}       {{y}}</td>
+            <td>{{resultans[x]}}</td>
+            <td>{{y}}</td>
           </tr>
         %end
         </table>
