@@ -87,7 +87,7 @@ def quiz_tests(no):
         success = []
         resultans = []
         resultquest = []
-        for x in range(1, numQ):
+        for x in range(1, numQ+2):
             ans = request.forms.get("Radios" + str(x))
             resultans.append(ans)
             quest = request.forms.get("Quest" + str(x))
