@@ -50,20 +50,16 @@
                     %county = 1
                     %for y in ans:
                       %if county == 1:
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{countx}}{{county}}" value="Radio{{x}}" checked>
-                            <label class="form-check-label" for="gridRadios{{countx}}{{county}}">
-                              {{result[questions[y]][1]}}
-                            </label>
-                          </div>
+                        %chck = checked
                       %else:
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{countx}}{{county}}" value="Radio{{x}}">
-                            <label class="form-check-label" for="gridRadios{{countx}}{{county}}">
-                              {{result[questions[y]][1]}}
-                            </label>
-                          </div>
+                        %chck = None
                       %end
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="Radios" id="gridRadios{{countx}}{{county}}" value="Radio{{x}}" {{chck}}>
+                        <label class="form-check-label" for="gridRadios{{countx}}{{county}}">
+                          {{result[questions[y]][1]}}
+                        </label>
+                      </div>
                       %county = county +1
                     %end
                   </div>
