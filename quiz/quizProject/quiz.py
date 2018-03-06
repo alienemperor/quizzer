@@ -79,7 +79,7 @@ def quiz_tests(no):
     topic = d.fetchone()
 
     if request.POST:
-        testing = []
+        realans = []
         success = []
         resultans = []
         resultquest = []
@@ -90,12 +90,12 @@ def quiz_tests(no):
             resultquest.append(quest)
 
             for i in result:
-                if quest in i[0]:
-                    if ans in i[1]:
-                        testing.append(i[1])
-                        success.append(True)
-                    else:
-                        success.append(False)
+                if quest in i[0] and ans in i[1]:
+                    realans.append(i[1])
+                    success.append(True)
+                else:
+                    realans.append(i[1])
+                    success.append(False)
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, testing=testing)
 
@@ -103,7 +103,7 @@ def quiz_tests(no):
         numQ = 25
 
         if len(result) < numQ:
-            numQ = len(result)-1
+            numQ = len(result)
 
         questions = random.sample(range(0, len(result)), numQ)
 
