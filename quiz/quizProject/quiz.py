@@ -103,7 +103,7 @@ def quiz_tests(no):
         numQ = 25
 
         if len(result) < numQ:
-            numQ = len(result)
+            numQ = len(result)-1
 
         questions = random.sample(range(0, len(result)), numQ)
 
