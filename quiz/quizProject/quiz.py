@@ -97,7 +97,7 @@ def quiz_tests(no):
                     realans.append(i[1])
                     success.append(False)
 
-        return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, testing=testing)
+        return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, testing=realans)
 
     else:
         numQ = 25
