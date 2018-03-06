@@ -39,7 +39,7 @@
                     %else:
                         %bckg = None
                     %end
-                <form class="{{bckg}}" style="padding:10px;">
+                <div class="{{bckg}}" style="padding:10px;">
                     <h4>{{result[questions[x]][0]}}</h4>
                   <fieldset class="form-group">
                     <div class="row">
@@ -65,7 +65,7 @@
                       </div>
                     </div>
                   </fieldset>
-                </form>
+                </div>
             %countx = countx + 1
             %end
             <button type="submit" class="btn btn-primary">Submit</button>
