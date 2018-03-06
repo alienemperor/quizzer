@@ -87,13 +87,15 @@ def quiz_tests(no):
             resultans.append(ans)
             quest = request.forms.get("Quest" + str(x))
             resultquest.append(quest)
-            if quest in result:
-                if ans == quest[1]:
-                    success.append(True)
+
+            for i in result:
+                if quest in i[0]:
+                    if ans == i[1]:
+                        success.append(True)
+                    else:
+                        success.append(False)
                 else:
-                    success.append(False)
-            else:
-                success = "no"
+                    success = "no"
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success)
 
