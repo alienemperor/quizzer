@@ -70,7 +70,7 @@ def show_terms(no):
 @route('/quiz/<no:int>', method='POST')
 def quiz_tests(no):
 
-    if request.POST:
+    if request.POST.save:
 
         return template('quiz_result')
 
