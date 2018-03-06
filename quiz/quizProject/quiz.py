@@ -67,7 +67,7 @@ def show_terms(no):
     return output
 
 
-@route('/quiz/<no:int>', method='POST')
+@route('/quiz/<no:int>')
 def quiz_tests(no):
 
     #if request.POST.save:
