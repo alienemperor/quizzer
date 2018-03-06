@@ -49,11 +49,10 @@
                         %def get_ans():
                             %ans = random.sample(range(0, len(result)-1), 3)
                             %ans.append(x)
+                            %return ans
                         %end
 
-                        %ans = []
-
-                        %get_ans()
+                        %ans = get_ans()
 
                         %for num in ans:
                           %if ans.count(num) > 1:
