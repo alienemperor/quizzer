@@ -77,13 +77,17 @@ def quiz_tests(no):
     d = conn.cursor()
     d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
     topic = d.fetchone()
+    numQ = 25
+
+    if len(result) < numQ:
+        numQ = len(result)
 
     if request.POST:
         realans = []
         success = []
         resultans = []
         resultquest = []
-        for x in range(1, 11):
+        for x in range(1, numQ):
             ans = request.forms.get("Radios" + str(x))
             resultans.append(ans)
             quest = request.forms.get("Quest" + str(x))
@@ -100,10 +104,6 @@ def quiz_tests(no):
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, testing=realans)
 
     else:
-        numQ = 25
-
-        if len(result) < numQ:
-            numQ = len(result)
 
         questions = random.sample(range(0, len(result)), numQ)
 
