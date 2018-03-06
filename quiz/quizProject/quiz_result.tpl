@@ -42,6 +42,7 @@
           <tr>
             <td>{{resultquest[x]}}</td>
             <td>{{resultans[x]}}</td>
+            <td>{{testing[x]}}</td>
             <td>{{y}}</td>
           </tr>
         %end

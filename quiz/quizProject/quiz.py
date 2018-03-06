@@ -79,6 +79,7 @@ def quiz_tests(no):
     topic = d.fetchone()
 
     if request.POST:
+        testing = []
         success = []
         resultans = []
         resultquest = []
@@ -91,11 +92,12 @@ def quiz_tests(no):
             for i in result:
                 if quest in i[0]:
                     if ans in i[1]:
+                        testing.append(i[1])
                         success.append(True)
                     else:
                         success.append(False)
 
-        return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success)
+        return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, testing=testing)
 
     else:
         numQ = 25
