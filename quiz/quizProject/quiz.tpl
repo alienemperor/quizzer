@@ -29,7 +29,7 @@
       </div>
     </nav>
 
-    <div class="container" style="margin:auto;width:80%;padding-top:20px;">
+    <div class="container" style="margin:auto;width:60%;padding-top:20px;">
         <h2>{{topic[0]}}</h2>
 
         %countx = 1
@@ -39,7 +39,7 @@
                 %else:
                     %bckg = None
                 %end
-            <form class="{{bckg}} text-center">
+            <form class="{{bckg}}">
                 <h4>{{result[questions[x]][0]}}</h4>
               <fieldset class="form-group">
                 <div class="row">
