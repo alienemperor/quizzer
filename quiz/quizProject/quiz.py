@@ -83,7 +83,7 @@ def quiz_tests(no):
         success = []
         resultans = []
         resultquest = []
-        for x in range(1, 10):
+        for x in range(1, 11):
             ans = request.forms.get("Radios" + str(x))
             resultans.append(ans)
             quest = request.forms.get("Quest" + str(x))
@@ -103,7 +103,7 @@ def quiz_tests(no):
         numQ = 25
 
         if len(result) < numQ:
-            numQ = len(result)-1
+            numQ = len(result)
 
         questions = random.sample(range(0, len(result)), numQ)
 
