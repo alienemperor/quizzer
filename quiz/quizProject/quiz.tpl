@@ -45,8 +45,13 @@
                   <fieldset class="form-group">
                     <div class="row">
                       <div class="col-sm-10">
-                        %ans = random.sample(range(0, len(result)-1), 3)
-                        %ans.append(x)
+                        %def get_ans():
+                            %ans = random.sample(range(0, len(result)-1), 3)
+                            %ans.append(x)
+                        %get_ans()
+                        %for num in ans:
+                          %if ans.count(num) > 1:
+                            %get_ans()
                         %random.shuffle(ans)
                         %county = 1
                         %for y in ans:
