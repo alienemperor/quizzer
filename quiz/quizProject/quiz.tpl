@@ -34,14 +34,14 @@
 
         %countx = 1
         %for x in range (0,numQ):
-            <form>
-                <h4>{{result[questions[x]][0]}}</h4>
                 %if countx%2 == 0:
                     %bckg = "bg-light"
                 %else:
                     %bckg = None
                 %end
-              <fieldset class="form-group {{bckg}}">
+            <form class="{{bckg}}">
+                <h4>{{result[questions[x]][0]}}</h4>
+              <fieldset class="form-group">
                 <div class="row">
                   <div class="col-sm-10">
                     %ans = random.sample(range(0, len(result)-1), 3)
