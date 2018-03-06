@@ -49,16 +49,19 @@
                         %def get_ans():
                             %ans = random.sample(range(0, len(result)-1), 3)
                             %ans.append(x)
+
+                            %for num in ans:
+                              %if ans.count(num) > 1:
+                                %ans = get_ans()
+                              %end
+                            %end
+
                             %return ans
                         %end
 
                         %ans = get_ans()
 
-                        %for num in ans:
-                          %if ans.count(num) > 1:
-                            %get_ans()
-                          %end
-                        %end
+
 
                         %random.shuffle(ans)
                         %county = 1
