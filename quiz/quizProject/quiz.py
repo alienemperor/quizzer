@@ -70,11 +70,11 @@ def show_terms(no):
 @route('/quiz/<no:int>', method='POST')
 def quiz_tests(no):
 
-    if request.POST.save:
+    #if request.POST.save:
 
-        return template('quiz_result')
+       # return template('quiz_result')
 
-    else:
+    #else:
         conn = sqlite3.connect('quiz.db')
         c = conn.cursor()
         c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
