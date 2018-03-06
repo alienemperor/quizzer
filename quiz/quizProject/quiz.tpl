@@ -39,7 +39,7 @@
                 %else:
                     %bckg = None
                 %end
-            <form class="{{bckg}}">
+            <form class="{{bckg}}" style="margin:auto;">
                 <h4>{{result[questions[x]][0]}}</h4>
               <fieldset class="form-group">
                 <div class="row">
