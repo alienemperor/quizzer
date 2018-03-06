@@ -70,25 +70,32 @@ def show_terms(no):
 @route('/quiz/<no:int>', method='POST')
 @route('/quiz/<no:int>', method='GET')
 def quiz_tests(no):
+    conn = sqlite3.connect('quiz.db')
+    c = conn.cursor()
+    c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
+    result = c.fetchall()
+    d = conn.cursor()
+    d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
+    topic = d.fetchone()
 
     if request.POST:
-
+        success = []
         resultans = []
         resultquest = []
         for x in range(1, 10):
-            resultans.append(request.forms.get("Radios" + str(x)))
-            resultquest.append(request.forms.get("Quest" + str(x)))
+            ans = request.forms.get("Radios" + str(x))
+            resultans.append(ans)
+            quest = request.forms.get("Quest" + str(x))
+            resultquest.append(quest)
+            if quest in result:
+                if ans == quest[1]:
+                    success[x] = True
+                else:
+                    success[x] = False
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest)
 
     else:
-        conn = sqlite3.connect('quiz.db')
-        c = conn.cursor()
-        c.execute("SELECT term,definition FROM terms WHERE topicid LIKE ?", (str(no),))
-        result = c.fetchall()
-        d = conn.cursor()
-        d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
-        topic = d.fetchone()
         numQ = 25
 
         if len(result) < numQ:
