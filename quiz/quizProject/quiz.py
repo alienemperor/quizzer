@@ -73,11 +73,13 @@ def quiz_tests(no):
 
     if request.POST:
 
-        result = []
+        resultans = []
+        resultquest = []
         for x in range(1, 10):
-            result.append(request.forms.get("Radios"+str(x)))
+            resultans.append(request.forms.get("Radios" + str(x)))
+            resultquest.append(request.form.get("quest" + str(x)))
 
-        return template('quiz_result', result=result)
+        return template('quiz_result', resultans=resultans, resultquest=resultquest)
 
     else:
         conn = sqlite3.connect('quiz.db')

@@ -40,7 +40,7 @@
                         %bckg = None
                     %end
                 <div class="{{bckg}}" style="padding:10px;">
-                    <h4>{{result[questions[x]][0]}}</h4>
+                    <h4 name="Quest{{countx}}">{{result[questions[x]][0]}}</h4>
                   <fieldset class="form-group">
                     <div class="row">
                       <div class="col-sm-10">
