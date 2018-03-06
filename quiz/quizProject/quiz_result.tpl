@@ -43,7 +43,7 @@
             %'''
           <tr>
             <td>{{resultquest[x]}}</td>
-            <td>"{{resultans[x]}}       {{success}}"</td>
+            <td>"{{resultans[x]}}       {{success[x]}}"</td>
           </tr>
         %end
         </table>

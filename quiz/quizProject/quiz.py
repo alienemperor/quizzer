@@ -77,9 +77,9 @@ def quiz_tests(no):
     d = conn.cursor()
     d.execute("SELECT topic FROM topics WHERE id LIKE ?", (str(no),))
     topic = d.fetchone()
+    success = []
 
     if request.POST:
-        success = []
         resultans = []
         resultquest = []
         for x in range(1, 10):
@@ -91,11 +91,9 @@ def quiz_tests(no):
             for i in result:
                 if quest in i[0]:
                     if ans == i[1]:
-                        success.append(True)
+                        success.append("True")
                     else:
-                        success.append(False)
-                else:
-                    success = "no"
+                        success.append("False")
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success)
 
