@@ -49,9 +49,13 @@
                             %ans = random.sample(range(0, len(result)-1), 3)
                             %ans.append(x)
                         %get_ans()
+
                         %for num in ans:
                           %if ans.count(num) > 1:
                             %get_ans()
+                          %end
+                        %end
+
                         %random.shuffle(ans)
                         %county = 1
                         %for y in ans:
