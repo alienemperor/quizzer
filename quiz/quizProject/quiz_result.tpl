@@ -29,4 +29,15 @@
       </div>
     </nav>
 
+  <div class="container" style="margin:auto;width:80%;padding-top:20px;">
+        <h3>Topics:</h3>
+        <table class="table table-striped table-bordered" style="text:center">
+        %for x in result:
+          <tr>
+            <td>{{x}}</td>
+          </tr>
+        %end
+        </table>
+    </div>
+
 </body>
