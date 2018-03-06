@@ -29,7 +29,7 @@
       </div>
     </nav>
 
-    <div class="container" style="margin:auto;width:40%;padding-top:20px;">
+    <div class="container" style="margin:auto;width:40%;padding-top:20px;padding-left:10px;">
         <h2>{{topic[0]}}</h2>
 
         %countx = 1
