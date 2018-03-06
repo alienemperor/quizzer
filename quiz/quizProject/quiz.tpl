@@ -51,6 +51,8 @@
                             %ans.append(x)
                         %end
 
+                        %ans = []
+
                         %get_ans()
 
                         %for num in ans:
