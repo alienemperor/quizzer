@@ -37,7 +37,7 @@
             <form>
                 <h4>{{result[questions[x]][0]}}</h4>
                 %if countx%2 == 0:
-                    %bckg = style="Background-color:grey;"
+                    %bckg = style="Background-color:gray;"
                 %else:
                     %bckg = None
                 %end
