@@ -50,7 +50,7 @@
                     %county = 1
                     %for y in ans:
                       %if county == 1:
-                        %chck = checked
+                        %chck = "checked"
                       %else:
                         %chck = None
                       %end
