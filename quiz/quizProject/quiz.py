@@ -68,6 +68,7 @@ def show_terms(no):
 
 
 @route('/quiz/<no:int>', method='POST')
+@route('/quiz/<no:int>', method='GET')
 def quiz_tests(no):
 
     if request.POST:
