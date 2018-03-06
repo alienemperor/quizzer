@@ -33,7 +33,7 @@
         <h3>Topics:</h3>
         <table class="table table-striped table-bordered" style="text:center">
         %for x in range(1, len(resultans)):
-            %if success[x]:
+            %if success[(x-1)]:
                 %y = "correct"
             %else:
                 %y = "Incorrect"
