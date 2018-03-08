@@ -34,11 +34,11 @@
         <form action="/quiz/{{no}}" method="POST">
             %countx = 1
             %for x in range (0,numQ-1):
-                    %if countx%2 == 0:
-                        %bckg = "bg-light"
-                    %else:
-                        %bckg = None
-                    %end
+                %if (countx % 2 == 0):
+                    %bckg = "bg-light"
+                %else:
+                    %bckg = None
+                %end
                 <div class="{{bckg}}" style="padding:10px;">
                     <h4>{{result[questions[x]][0]}}</h4>
                     <input type="hidden" name="Quest{{countx}}" value="{{result[questions[x]][0]}}">
@@ -61,8 +61,6 @@
 
                         %ans = get_ans()
 
-
-
                         %random.shuffle(ans)
                         %county = 1
                         %for y in ans:
@@ -84,7 +82,7 @@
                   </fieldset>
                 </div>
             %countx = countx + 1
-            %end
+        %end
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
