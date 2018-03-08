@@ -101,7 +101,7 @@ def quiz_tests(no):
                     realans.append(i[1])
                     success.append(False)
 
-        print(realans, success, resultans, resultquest)
+        #print(realans, success, resultans, resultquest)
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, realans=realans)
 
