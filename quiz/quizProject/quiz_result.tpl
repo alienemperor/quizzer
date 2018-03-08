@@ -50,8 +50,8 @@
           <tr>
             <td>{{resultquest[x]}}</td>
             <td>{{resultans[x]}}</td>
-            <td>{{realans[x]}}</td>
             <td class="{{bckg}}">{{y}}</td>
+            <td>{{realans[x]}}</td>
           </tr>
         %end
         </table>
