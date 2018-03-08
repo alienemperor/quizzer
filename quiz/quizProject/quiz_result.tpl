@@ -33,7 +33,7 @@
         <h3>Topics:</h3>
         <table class="table table-striped table-bordered" style="text:center">
 
-        %for x in range(0, (len(resultans))):
+        %for x in range(0, (len(resultans)-1)):
             %if success[x]:
                 %y = "correct"
             %else:
