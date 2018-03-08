@@ -33,7 +33,7 @@
         <h2 style="padding:10px;">{{topic[0]}}</h2>
         <form action="/quiz/{{no}}" method="POST">
             %countx = 1
-            %for x in range (0,numQ):
+            %for x in range (0,numQ-1):
                     %if countx%2 == 0:
                         %bckg = "bg-light"
                     %else:
