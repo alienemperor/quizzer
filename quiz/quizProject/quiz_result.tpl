@@ -49,8 +49,7 @@
             %end
           <tr>
             <td>{{resultquest[x]}}</td>
-            <td>{{resultans[x]}}</td>
-            <td class="{{bckg}}">{{y}}</td>
+            <td class="{{bckg}}">{{resultans[x]}}</td>
             <td>{{realans[x]}}</td>
           </tr>
         %end
