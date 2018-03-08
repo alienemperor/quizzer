@@ -32,18 +32,26 @@
   <div class="container" style="margin:auto;width:80%;padding-top:20px;">
         <h3>Topics:</h3>
         <table class="table table-striped table-bordered" style="text:center">
+            <tr>
+                <th>Term</th>
+                <th>Your Choice</th>
+                <th>Outcome</th>
+                <th>Correct answer</th>
+            </tr>
 
         %for x in range(0, (len(success)-1)):
             %if success[x]:
                 %y = "correct"
+                %bckg = "bg-success text-white"
             %else:
                 %y = "Incorrect"
+                %bckg = "bg-danger text-white"
             %end
           <tr>
-            <td>{{resultquest[x]}}</td>
-            <td>{{resultans[x]}}</td>
-            <td>{{realans[x]}}</td>
-            <td>{{y}}</td>
+            <td class="{{bckg}}">{{resultquest[x]}}</td>
+            <td class="{{bckg}}">{{resultans[x]}}</td>
+            <td class="{{bckg}}">{{realans[x]}}</td>
+            <td class="{{bckg}}">{{y}}</td>
           </tr>
         %end
         </table>
