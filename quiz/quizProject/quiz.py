@@ -103,7 +103,7 @@ def quiz_tests(no):
                     success.append(False)
                     print(i[1], "false")
 
-        print(resultans, '\n', resultquest)
+        print(resultans, '\n', resultquest, '\n', success)
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, realans=realans)
 
