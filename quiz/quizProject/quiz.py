@@ -109,6 +109,8 @@ def quiz_tests(no):
 
         questions = random.sample(range(0, len(result)), numQ)
 
+        print(questions, '\n', numQ, '\n', result)
+
         return template('quiz', questions=questions, numQ=numQ, result=result, topic=topic, no=no)
 
 
