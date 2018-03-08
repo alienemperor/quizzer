@@ -35,7 +35,6 @@
             <tr>
                 <th>Term</th>
                 <th>Your Choice</th>
-                <th>Outcome</th>
                 <th>Correct answer</th>
             </tr>
 
