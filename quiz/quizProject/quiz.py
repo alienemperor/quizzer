@@ -97,21 +97,15 @@ def quiz_tests(no):
                 if quest in i[0] and ans == i[1]:
                     realans.append(i[1])
                     success.append(True)
-                    print(i[1], "true")
                 elif quest in i[0] and ans == i[1]:
                     realans.append(i[1])
                     success.append(False)
-                    print(quest, i[1], "false")
-
-        print(resultans, '\n', resultquest, '\n', success)
 
         return template('quiz_result', resultans=resultans, resultquest=resultquest, success=success, realans=realans)
 
     else:
 
         questions = random.sample(range(0, len(result)), numQ)
-
-        #print(questions, '\n', numQ, '\n', result)
 
         return template('quiz', questions=questions, numQ=numQ, result=result, topic=topic, no=no)
 
