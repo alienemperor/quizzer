@@ -48,9 +48,9 @@
                 %bckg = "bg-danger text-white"
             %end
           <tr>
-            <td class="{{bckg}}">{{resultquest[x]}}</td>
-            <td class="{{bckg}}">{{resultans[x]}}</td>
-            <td class="{{bckg}}">{{realans[x]}}</td>
+            <td>{{resultquest[x]}}</td>
+            <td>{{resultans[x]}}</td>
+            <td>{{realans[x]}}</td>
             <td class="{{bckg}}">{{y}}</td>
           </tr>
         %end
