@@ -94,10 +94,10 @@ def quiz_tests(no):
             resultquest.append(quest)
 
             for i in result:
-                if quest in i[0] and ans == i[1]:
+                if quest == i[0] and ans == i[1]:
                     realans.append(i[1])
                     success.append(True)
-                elif quest in i[0] and ans != i[1]:
+                elif quest == i[0] and ans != i[1]:
                     realans.append(i[1])
                     success.append(False)
 
