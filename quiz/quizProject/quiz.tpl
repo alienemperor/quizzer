@@ -74,7 +74,7 @@
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="Radios{{countx}}" id="Radios{{countx}}{{county}}" value="{{result[y][1]}}" {{chck}}>
                             <label class="form-check-label" for="Radios{{countx}}{{county}}">
-                              {{result[questions[y]][1]}}
+                              {{result[y][1]}}
                             </label>
                           </div>
                           %county = county +1
