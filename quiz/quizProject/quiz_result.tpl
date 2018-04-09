@@ -30,7 +30,7 @@
     </nav>
 
   <div class="container" style="margin:auto;width:80%;padding-top:20px;">
-        <h3>{{topic}}:</h3>
+        <h3>{{topic[0]}}:</h3>
         <table class="table table-striped table-bordered" style="text:center">
             <tr>
                 <th>Term</th>
