@@ -69,6 +69,8 @@
                           %else:
                             %chck = None
                           %end
+                          %print(questions[y])
+                          %print(result[questions[y]][1])
                           <div class="form-check">
                             <input class="form-check-input" type="radio" name="Radios{{countx}}" id="Radios{{countx}}{{county}}" value="{{result[questions[y]][1]}}" {{chck}}>
                             <label class="form-check-label" for="Radios{{countx}}{{county}}">
