@@ -108,6 +108,7 @@ def quiz_tests(no):
         questions = random.sample(range(0, len(result)), numQ)
 
         return template('quiz', questions=questions, numQ=numQ, result=result, topic=topic, no=no)
+        print(numQ)
 
 
 run(host='192.168.100.222', port=8090, debug=True, reloader=True)
