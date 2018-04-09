@@ -69,6 +69,7 @@
                           %else:
                             %chck = None
                           %end
+                          %print(y)
                           %print(questions[y])
                           %print(result[questions[y]][1])
                           <div class="form-check">
