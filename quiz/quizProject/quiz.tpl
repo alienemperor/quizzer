@@ -41,7 +41,7 @@
                 %end
                 <div class="{{bckg}}" style="padding:10px;">
                     <h4>{{result [x][0]}}</h4>
-                    <input type="hidden" name="Quest{{countx}}" value="{{result[x]][0]}}">
+                    <input type="hidden" name="Quest{{countx}}" value="{{result[x][0]}}">
                   <fieldset class="form-group">
                     <div class="row">
                       <div class="col-sm-10">
