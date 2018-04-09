@@ -70,10 +70,9 @@
                             %chck = None
                           %end
                           %print(y)
-                          %print(questions[y])
-                          %print(result[questions[y]][1])
+                          %print(result[y][1])
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Radios{{countx}}" id="Radios{{countx}}{{county}}" value="{{result[questions[y]][1]}}" {{chck}}>
+                            <input class="form-check-input" type="radio" name="Radios{{countx}}" id="Radios{{countx}}{{county}}" value="{{result[y][1]}}" {{chck}}>
                             <label class="form-check-label" for="Radios{{countx}}{{county}}">
                               {{result[questions[y]][1]}}
                             </label>
